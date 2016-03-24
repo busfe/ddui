@@ -1,0 +1,92 @@
+@font-face {
+    font-family: home_icon;
+    src: url(/common/static/font/home_icon.woff) format('woff'),/* chrome¡¢firefox */
+    url(/common/static/font/home_icon.ttf) format('truetype'),/* chrome¡¢firefox¡¢opera¡¢Safari, Android, iOS 4.2+*/
+    url(/common/static/font/home_icon.svg#home_icon) format('svg');/* iOS 4.1- */
+
+    font-weight: 400;
+    font-style: normal
+}
+html{
+	font-family: 'PingFang SC',STHeitiSC-Light,Helvetica-Light,arial,sans-serif,'Droid Sans Fallback';
+}
+body{
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+input,textarea{
+	-webkit-appearance:none;
+	color:#666;
+	font-size: 12px;
+	overflow: hidden;
+	outline: none;
+	border: none;
+	&::-webkit-input-placeholder{
+		color:#898989;
+		font-size: 12px;
+	}
+	&::-webkit-resizer{
+		display: none;
+	}
+}
+
+/*************************************** font-icon *******************************************/
+.f-icon{
+	font-style: normal;
+    font-family: home_icon;
+}
+/*************************************** menu *******************************************/
+.menu {
+	height:2rem;
+	line-height: 2rem;
+	font-size: 16px;
+	border-bottom: 1px #e5e5e5 solid;
+	.back{
+		position: absolute;
+	    display: block;
+	    width: 31px;
+	    height: 2rem;
+	    top: 1px;
+	    left: 5px;
+	    &:before{
+	    	content: 'J';
+	        font-family: home_icon;
+	        font-size: 30px;
+	        font-weight: normal;
+	        width: 30px;
+	        display: inline-block;
+	        border-radius: 30px;
+	        color: #b9b9b9;
+	        margin-left: 2px;
+	    }
+	}
+}
+
+@keyframes strategy-rainbow {
+	0% {}
+	25% { background: #0ac5f4 }
+	50% { background: #ca5bfe }
+	75% { background: #10d36c }
+	100% { background: #10d36c }
+}
+@-webkit-keyframes strategy-rainbow {
+	0% {}
+	25% { background: #0ac5f4 }
+	50% { background: #ca5bfe }
+	75% { background: #10d36c }
+	100% { background: #10d36c }
+}
