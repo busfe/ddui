@@ -1,0 +1,28 @@
+@import "../mixins/iconfont";
+
+// font-face
+// @icon-url： 字体源文件的地址
+@font-face {
+  font-family: 'ddicon';
+  url('@{icon-url}.woff') format('woff'), /* chrome、firefox */
+  url('@{icon-url}.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('@{icon-url}.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.@{iconfont-css-prefix} {
+ .iconfont-mixin();
+}
+
+.@{iconfont-css-prefix}-home:before 					{content:'h'};
+.@{iconfont-css-prefix}-person:before 					{content:'G'};
+.@{iconfont-css-prefix}-loc:before 						{content:'U'};
+.@{iconfont-css-prefix}-arrow-right:before 				{content:'e'};
+.@{iconfont-css-prefix}-arrow-down:before 				{content:''};
+.@{iconfont-css-prefix}-current-loc:before 				{content:'V'};
+.@{iconfont-css-prefix}-swap:before 					{content:''};
+.@{iconfont-css-prefix}-search:before 					{content:'Q'};
+.@{iconfont-css-prefix}-poi:before 						{content:'F'};
+.@{iconfont-css-prefix}-close:before 					{content:'Z'};
+.@{iconfont-css-prefix}-walk:before 					{content:'b'};
+.@{iconfont-css-prefix}-focus:before 					{content:'r'};
+.@{iconfont-css-prefix}-copy:before 					{content:'s'};
