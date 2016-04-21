@@ -1,0 +1,75 @@
+@import "../mixins/index.less";
+@toast-prefix-cls: ~"@{css-prefix}toast";
+
+.@{toast-prefix-cls}{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	&-wrapper{
+		width: 120px;
+		height: 120px;
+		border-radius: 8px;
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: #000;
+		opacity: .8;
+	}
+	&-loading{
+		display: block;
+	}
+	&-success,
+	&-wrong,
+	&-alarm{
+		display: block;
+		font-size: 44px;
+	}
+	&-text{
+		width:100%;
+		padding: 0 12px;
+		text-align: center;
+		color: #ADADAD;
+	}
+}
+//单行文字
+.@{toast-prefix-cls}-single{
+	.@{toast-prefix-cls}-loading,
+	.@{toast-prefix-cls}-success,
+	.@{toast-prefix-cls}-wrong,
+	.@{toast-prefix-cls}-alarm{
+		position: absolute;
+		left:50%;
+		top:50%;
+		margin-top:-32.5px;
+		margin-left:-22px;
+	}
+	.@{toast-prefix-cls}-text{
+		position: absolute;
+		left:0;
+		bottom: 20px;
+	}
+}
+//双行文字
+.@{toast-prefix-cls}-double{
+	.@{toast-prefix-cls}-loading,
+	.@{toast-prefix-cls}-success,
+	.@{toast-prefix-cls}-wrong,
+	.@{toast-prefix-cls}-alarm{
+		margin:20px auto 8px auto;
+	}
+	.@{toast-prefix-cls}-text{
+		line-height:18px;
+	}
+}
+//没有Icon情况
+.@{toast-prefix-cls}-none-icon{
+	.@{toast-prefix-cls}-text{
+		position: absolute;
+		top:50%;
+		line-height: 18px;
+		transform:translate(0, -50%);
+	}
+}
